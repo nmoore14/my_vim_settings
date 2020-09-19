@@ -1,0 +1,75 @@
+" My custom vim setup
+
+" Force plugins to load correctly
+filetype off
+
+" Turn on syntax highlighting
+syntax on
+
+" Another helper for plugins
+filetype plugin indent on
+
+" Turn off modelines
+set modelines=0
+
+" Vim file creation settings
+set backupdir=~/.vim/vim_files/backup//
+set directory=~/.vim/vim_files/swap//
+set undodir=~/.vim/vim_files/undo//
+
+" Split window settings
+noremap <C-J> <C-W><C-J>
+noremap <C-K> <C-W><C-K>
+noremap <C-L> <C-W><C-L>
+noremap <C-H> <C-W><C-H>
+
+
+" Editor Settings
+set encoding=utf-8
+
+set number
+set relativenumber
+set formatoptions=tcqrn1
+
+set expandtab
+set noshiftround
+set autoindent
+set scrolloff=5
+set backspace=indent,eol,start
+
+set ttyfast
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+
+au BufNewFile, BufRead *.py
+  \ set tabstop=4
+  \ set softtabstop=4
+  \ set shiftwidth=4
+  \ set textwidth=79
+  \ set fileformat=unix
+
+set clipboard=unnamed
+
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+vmap <C-c> "+y
+
+" Netrw settings
+let g:netrw_browse_split=3
+
+" Start and load plugins
+call plug#begin('~/.vim/plugged')
+  source ~/.vim/config/my_plugins.vim
+call plug#end()
+
+" My plugin settings
+source ~/.vim/config/my_plugin_settings.vim
+
