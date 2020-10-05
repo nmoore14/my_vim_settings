@@ -26,8 +26,13 @@ noremap <C-;> :Files<cr>
 
 " Airline Settings
 let g:airline_theme='ouo'
+let g:airline_powerline_fonts=1
 
 " Emmet Settings
 let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
+
+" Vim-Devicons settings
+let g:webdevicons_enable=1
+let g:webdevicons_enable_nerdtree=1
 
