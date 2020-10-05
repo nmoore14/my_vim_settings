@@ -15,3 +15,5 @@ Plug 'ap/vim-css-color'
 Plug 'altercation/vim-colors-solarized'
 Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
+Plug 'ryanoasis/vim-devicons'
+
